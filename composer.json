@@ -1,0 +1,42 @@
+{
+	"name": "wpextra/client",
+	"type": "library",
+	"description": "Plugin to write WordPress themes w Object-Oriented Code and the Twig Template Engine",
+	"keywords": [
+		"timber",
+		"twig",
+		"themes",
+		"templating"
+	],
+	"require": {
+		"php": ">=5.3.0|7.*",
+		"google/apiclient": "^2.0",
+		"guzzlehttp/guzzle": "^6.3@dev"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "5.7.16"
+	},
+	"support": {
+		"issues": "https://github.com/wpextra/client/issues",
+		"source": "https://github.com/wpextra/client",
+		"docs": "https://client.github.io/docs/"
+	},
+	"homepage": "http://wpextra.co",
+	"authors": [
+		{
+			"name": "WP EXTRA",
+			"email": "developer@wpextra.co"
+		}
+	],
+	"autoload":          {
+        "psr-4":    {
+            "Bridge\\Client\\": "src/"
+        }
+    },
+    "autoload-dev":      {
+        "psr-4": {
+            "Bridge\\Client\\Tests\\": "tests/src/"
+        }
+    },
+	"minimum-stability": "dev"
+}
