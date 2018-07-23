@@ -52,7 +52,7 @@ class Client {
 	}
 
 	public function get($url, $args = []) {
-		$res = $this->client->request('GET', $url, $args));
+		$res = $this->client->request('GET', $url, $args);
 		return $this->response($res);
 	}
 
