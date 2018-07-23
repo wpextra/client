@@ -50,6 +50,13 @@ class Client {
 		$query = wpe_build_querystring($args);
 		return $endpoint.'?'.$query;
 	}
+
+	public function get($url, $args = []) {
+		$res = $this->client->request('GET', $url, $args));
+		return $this->response($res);
+	}
+
+
 	public function platforms($args = []) {
 		$res = $this->client->request('GET', self::buildQuery(WPE_API_URL.'/platforms', $args));
 		return $this->response($res);
@@ -59,16 +66,16 @@ class Client {
 		return $this->response($res);
 	}
 	public function theme_dashboards($args = []) {
-	
+
 	}
 	public function theme_admins($args = []) {
-	
+
 	}
 	public function theme_logins($args = []) {
-	
+
 	}
 	public function blocks($args = []) {
-	
+
 	}
 	public function plugins($args = []) {
 		$res = $this->client->request('GET', self::buildQuery(WPE_API_URL.'/plugins', $args));
